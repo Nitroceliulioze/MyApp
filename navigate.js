@@ -8,14 +8,24 @@ import { NavigationContainer } from "@react-navigation/native";
 const Stack = createStackNavigator();
 
 export default function Navigate() {
-    return <NavigationContainer>
-        <Stack.Navigator>
-            <Stack.Screen name='Main'
-            component={Main}
-            options={{title: 'Main'}}/>
-            <Stack.Screen name='FullInfo'
-            component={FullInfo}
-            options={{title: 'Article'}}/>
-        </Stack.Navigator>
-    </NavigationContainer>;
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Main"
+          component={Main}
+          options={{
+            title: "Main",
+            headerStyle: { backgroundColor: "#eb5d3d", height: 90 },
+            headerTitleStyle: { fontWeight: "400", textAlign: 'center'},
+          }}
+        />
+        <Stack.Screen
+          name="FullInfo"
+          component={FullInfo}
+          options={{ title: "Article" }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
